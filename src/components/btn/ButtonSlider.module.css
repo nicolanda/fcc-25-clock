@@ -1,0 +1,73 @@
+.container {
+  position: relative;
+  display: inline-block;
+  width: 60px;
+  height: 34px;
+  border: 1px solid #ccc;
+  border-radius: 50%;
+  cursor: pointer;
+}
+
+.container.disabled {
+  pointer-events: none;
+  cursor: default;
+}
+
+.checkbox {
+  display: none;
+}
+
+.slider {
+  cursor: pointer;
+  width: 60px;
+  height: 34px;
+  background-color: #ccc;
+  border-radius: 50px;
+  transition: background-color 0.4s;
+  overflow: hidden;
+}
+
+.eye {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-color: #fff;
+  transition: transform 0.4s;
+}
+
+.open {
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  overflow: hidden;
+}
+
+.closed {
+  width: 24px;
+  height: 8px;
+  border-radius: 4px;
+}
+
+.pupil {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 6px;
+  height: 6px;
+  background-color: #000;
+  border-radius: 50%;
+}
+
+.checkbox:checked + .slider {
+  background-color: #888;
+}
+
+.checkbox:checked + .slider .open {
+  transform: translate(-50%, -60%);
+}
+
+.checkbox:checked + .slider .closed {
+  transform: translate(-50%, -50%) ;
+}
